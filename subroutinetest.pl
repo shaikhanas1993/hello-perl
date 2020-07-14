@@ -19,6 +19,8 @@ for(keys %hash){
 =cut
 
 
+# $_
+
 
 delete $hash{"anas"};
 p %hash;
