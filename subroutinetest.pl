@@ -9,22 +9,16 @@ use JSON::PP;
 use Data::Dumper;
 use integer;
 
-my $msg;
+my %hash = ("anas" => 1, "jarrar" => 2);
 
-sub ask_user{
-    printf "please enter something::";
+=begin comment
+for(keys %hash){
+    say $hash{$_};
 }
+=end comment
+=cut
 
-sub show_message {
-    printf("you entered :: %s",$msg) ;
-}
 
-sub get_input {
-   $msg = <STDIN>;
-   return $msg;
-}
 
-&ask_user;
-&get_input;
-&show_message;
-
+delete $hash{"anas"};
+p %hash;
