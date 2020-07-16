@@ -6,12 +6,19 @@ use Data::Printer;
 use integer;
 
 
-my $counter = 10;
-while($counter > 0){
-    $counter--;
-    say $counter;
-    sleep(1);
+my @haystack = 1..10;
+say "enter a number to seach\n";
+my $input = <STDIN>;
+chomp($input);
+$input = int($input);
 
-    say "happy new year" if($counter == 0 );
+my $counter = 0;
+find_needle_in_haystack: {
+do
+{
+    
+        last if $haystack[$counter] ==  $input;
+        ++$counter;
+}while(scalar @haystack >$counter);
 }
-
+say "fount at $counter";
