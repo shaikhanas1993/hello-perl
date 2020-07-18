@@ -5,6 +5,14 @@ use integer;
 use Data::Printer;
 use feature qw(say switch);
 
+
+# my $ar = [1..9];
+# my $i = 0;
+# for(@$ar){
+#     say $ar->[$i++];
+# }
+
+
 =begin
 my $x = 10;
 my $xr = \$x;
@@ -27,6 +35,7 @@ for(@$arr){
 =end
 =cut
 
+=bgin
 my %hash = ("anas" => 1,"jarrar" => 2, "kevein" => 3);
 my $r = \%hash;
 say ref $r;
@@ -39,4 +48,5 @@ say ref $r;
 while(my($key,$value) = each(%$r)){
     say "$key :: $value";
 }
-
+=end
+=cut
