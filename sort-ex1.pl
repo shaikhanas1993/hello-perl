@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use integer;
+use Data::Printer;
 
 my @products = (
    {
@@ -26,7 +27,8 @@ my @products = (
 		 } @products;
 
 foreach my $p (@products){
-   printf "%-15s %2d USD %2.1f\n" => @{$p}{qw(name price discount)};
+
+    printf "%-15s %-2d USD %10.2f\n" => @{$p}{qw(name price discount)};
 }
 
 
