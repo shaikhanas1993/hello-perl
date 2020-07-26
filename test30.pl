@@ -3,7 +3,21 @@ use strict;
 use warnings;
 
 
+#case insensitive example
+my $str = "REGULAR EXPRESSION";
+if($str =~ /expression/i){
+    print "matched";
+}else{
+    print "not matched";
+}
 
+#case sensitive example
+my $str = "REGULAR EXPRESSION";
+if($str =~ /expression/){
+    print "matched";
+}else{
+    print "not matched";
+}
 
 # my @html = (
 #     '<p>',
