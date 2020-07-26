@@ -1,8 +1,8 @@
 use strict;
 use warnings;
 use DBI;
-
-my $dbh = DBI->connect("DBI:mysql:classicmodels",'root','root');
+my $dsn = "DBI:mysql:database=classicmodels;host=localhost;port=3306";
+my $dbh = DBI->connect($dsn,'root','root');
 die "failed to connect to MySQL database:DBI->errstr()" unless($dbh);
 
 # prepare SQL statement
