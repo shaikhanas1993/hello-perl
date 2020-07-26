@@ -2,22 +2,35 @@
 use strict;
 use warnings;
 
+#quantifiers {}[]()^$.|\?*+
+
+# quantifiers {}[]()^? $|.\+*
+my @words = ("available", "avatar", "avalon");
+foreach(@words){
+    print($_,"\n") if($_ =~ /a*l+/);
+}
+
+
+# foreach(@words){
+#    print $_, "\n" if(/a*l+/);
+# }
+
 
 #case insensitive example
-my $str = "REGULAR EXPRESSION";
-if($str =~ /expression/i){
-    print "matched";
-}else{
-    print "not matched";
-}
+# my $str = "REGULAR EXPRESSION";
+# if($str =~ /expression/i){
+#     print "matched";
+# }else{
+#     print "not matched";
+# }
 
-#case sensitive example
-my $str = "REGULAR EXPRESSION";
-if($str =~ /expression/){
-    print "matched";
-}else{
-    print "not matched";
-}
+# #case sensitive example
+# my $str = "REGULAR EXPRESSION";
+# if($str =~ /expression/){
+#     print "matched";
+# }else{
+#     print "not matched";
+# }
 
 # my @html = (
 #     '<p>',
